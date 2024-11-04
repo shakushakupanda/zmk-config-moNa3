@@ -1,10 +1,6 @@
 #include "moNa3.dtsi"
 
-&default_transform {
-    col-offset = <6>;
-};
-
-kscan0 {
+&kscan0 {
         compatible = "zmk,kscan-gpio-charlieplex";
         wakeup-source;
 
@@ -19,7 +15,7 @@ kscan0 {
           ; // addressable space is 5x5, (minus paired values)
     };
 
-default_transform: matrix_transform {
+&default_transform {
         compatible = "zmk,matrix-transform";
         rows = <4>;
         columns = <5>;
