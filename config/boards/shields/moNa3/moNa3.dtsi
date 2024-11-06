@@ -10,6 +10,9 @@
         compatible = "zmk,matrix-transform";
     };
     
+    kscan0: kscan {
+        
+    };
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
