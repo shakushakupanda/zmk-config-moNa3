@@ -1,7 +1,17 @@
 #include "moNa3.dtsi"
 
 &kscan0 {
-        col-gpios
+    compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "col2row";
+            row-gpios
+                = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+                , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+                , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 
+                , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> 			
+                ;
+
+            col-gpios
             = <&xiao_d 10 GPIO_ACTIVE_HIGH>
             , <&xiao_d 9 GPIO_ACTIVE_HIGH> 
             , <&xiao_d 8 GPIO_ACTIVE_HIGH> 
@@ -22,6 +32,7 @@
         RC(3,0) RC(3,1) RC(3,2)   RC(3,3) RC(3,4) RC(3,5)       
     >;
 };
+
 
 &left_encoder {
     status = "okay";
