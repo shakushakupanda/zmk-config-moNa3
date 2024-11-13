@@ -16,7 +16,7 @@
 };
 
 &default_transform {
-  row-offset = <4>
+  row-offset = <4>;
 };
 
 / {
